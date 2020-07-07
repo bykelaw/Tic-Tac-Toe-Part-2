@@ -52,3 +52,62 @@ ol, ul {
   margin-left: 20px;
 }
 
+.Spin {
+  display: block;
+  font-size: 9rem;
+  transition:all  0.5s linear;
+  animation: spin 3s  ease-in infinite;
+  perspective: 50px;
+}
+
+@keyframes spin {
+  0% {
+    transform: scale(1);
+    color: hsl(240, 100%, 49%);
+  }
+  10% {
+    transform: scale(0.6);
+    color: hsl(240, 90%, 49%);
+  }
+
+  20% {
+    transform: rotate(60deg) scale(1.1);
+    color: hsl(300, 80%, 49%);
+
+  }
+
+  40% {
+    color: hsl(360, 60%, 49%);
+    transform: rotate(120deg) scale(0.3);
+  }
+
+  60% {
+    color: hsl(400, 40%, 49%);
+    transform: rotate(180deg) scale(.9);
+  }
+
+  80% {
+    color: hsl(460, 20%, 49%);
+    transform: rotate(240deg) scale(.5);
+  }
+
+  90% {
+    color: hsl(520, 10%, 49%);
+    transform: scale(0.6);
+  }
+  100% {
+    color: hsl(240, 100%, 49%);
+    transform: scale(1);
+  }
+}
+div>.Spin{
+  background-color: white;
+  color:white;
+  position:fixed;
+  height: 527px;
+  width: 501px;
+  z-index: 2;
+  font-family: cursive;
+  text-align: center;
+  left:1rem;
+}
